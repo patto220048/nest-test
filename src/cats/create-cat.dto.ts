@@ -1,5 +1,11 @@
+import { IsEmail, IsNotEmpty } from "class-validator";
+
 export class CreateCatDto {
-    name: string;
+    @IsNotEmpty()
+    id: string;
+    @IsEmail()
+    email: string;
+    name: string; 
     age: number;
     breed: string;
   }
